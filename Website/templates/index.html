@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OCR dan TTS dengan Flask</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Gambar atau Gunakan Kamera</h1>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*">
+            <input type="submit" value="Upload">
+        </form>
+
+        <div id="cameraControls">
+            <video id="video" width="640" height="480" autoplay></video>
+            <button id="snap">Capture</button>
+            <button id="startCamera">Take a Picture!</button>
+            <button id="stopCamera">Stop Camera</button>
+            <canvas id="canvas" width="640" height="480"></canvas>
+        </div>
+
+        <!-- Tempat untuk menampilkan hasil OCR dan player audio -->
+        <div id="result" class="message"></div>
+        <audio id="audioPlayer" controls style="width: 100%;"></audio>
+
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    </div>
+</body>
+</html>

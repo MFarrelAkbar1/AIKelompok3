@@ -1,0 +1,73 @@
+/* static/css/style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Menghilangkan margin default body */
+    padding: 0; /* Menghilangkan padding default body */
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="file"], input[type="submit"], button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"], button {
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover, button:hover {
+    background-color: #0056b3;
+}
+
+video, canvas {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+}
+
+canvas {
+    display: none; /* Sembunyikan canvas secara default */
+}
+
+.message {
+    padding: 10px;
+    color: #333;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.error {
+    color: #d9534f;
+    background: #f2dede;
+    border-color: #ebccd1;
+}
+
+/* Responsive media queries */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    video, canvas {
+        width: 100%;
+    }
+}
